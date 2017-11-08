@@ -21,6 +21,17 @@
                 </div> 
             </div>
             {{ content }}
+
+            <div class="col-xs-6 text-right">
+                {% if page.previous %}
+                <button class="btn btn-info"><a href="{{ page.previous.permalink }}">Previous Recipe</a></button>
+                {% endif %}
+            </div>
+            <div class="col-xs-6 text-left">
+                {% if page.next %}
+                <button class="btn btn-info"><a href="{{ page.next.permalink }}">Next Recipe</a></button>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

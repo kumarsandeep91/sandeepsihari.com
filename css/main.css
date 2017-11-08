@@ -27,3 +27,7 @@ body {
     font-size: 36px;
     margin-right: 10px;
 }
+
+.category-banner{
+    max-width: 600px;
+}
