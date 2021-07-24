@@ -1,20 +1,21 @@
 {
-  "name": "sandeepsihari.com",
-  "version": "1.0.0",
-  "description": "my personal website.",
-  "main": "index.js",
+  "name": "techno-baba",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kumarsandeep91/sandeepsihari.com.git"
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kumarsandeep91/sandeepsihari.com/issues"
-  },
-  "homepage": "https://github.com/kumarsandeep91/sandeepsihari.com#readme"
+  "devDependencies": {
+    "eslint": "7.31.0",
+    "eslint-config-next": "11.0.1"
+  }
 }
