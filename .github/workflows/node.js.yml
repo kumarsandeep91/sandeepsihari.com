@@ -9,15 +9,14 @@ on:
   pull_request:
     branches: [ master ]
 
+defaults:
+  run:
+    working-directory: ./techno-baba
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        shell: bash
-        working-directory: techno-baba
 
     strategy:
       matrix:
