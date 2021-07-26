@@ -9,9 +9,9 @@ on:
   pull_request:
     branches: [ master ]
 
-defaults:
-  run:
-    working-directory: ./techno-baba
+# defaults:
+#   run:
+#     working-directory: ./techno-baba
     
 jobs:
   build:
