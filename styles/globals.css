@@ -1,16 +1,67 @@
-html,
-body {
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&family=Source+Code+Pro:wght@400&display=swap);
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Oswald", sans-serif;
+  --font-secondary-weight-std: 500;
+  --font-monospaced: "Source Code Pro", monospace;
+  --s0: 5px;
+  --s1: 10px;
+  --s2: 20px;
+  --s3: 30px;
+  --s4: 40px;
+  --s5: 50px;
+  --s6: 60px;
+}
+/* body, */
+body[data-theme="light"] {
+  --background: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-primary: #6200ee;
+  --bg-primary-variant: #3700B3;
+  --bg-secondary: #03DAC6;
+  --bg-secondary-variant: #018786;
+  --bg-error: #b00020;
+  --bg-text: #000000;
+  --surface-text: #000000;
+  --primary-text: #ffffff;
+  --primary-variant-text: #ffffff;
+  --secondary-text: #000000;
+  --error-text: #ffffff;
+}
+body,
+body[data-theme="dark"] {
+  --background: #121212;
+  --bg-surface: #121212;
+  --bg-primary: #BB86FC;
+  --bg-primary-variant: #3700B3;
+  --bg-secondary: #03DAC6;
+  --bg-secondary-variant: #03DAC6;
+  --bg-error: #CF6679;
+  --bg-text: #ffffff;
+  --surface-text: #ffffff;
+  --primary-text: #000000;
+  --primary-variant-text: #ffffff;
+  --secondary-text: #000000;
+  --error-text: #000000;
+}
+body,
+html {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  font-family: var(--font-primary);
+  background: var(--background);
+  color: var(--bg-text);
+  line-height: 1.5;
+  -webkit-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
 }
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a {
+  text-decoration: none;
 }
