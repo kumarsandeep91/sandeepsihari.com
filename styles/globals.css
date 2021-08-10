@@ -4,13 +4,6 @@
   --font-secondary: "Oswald", sans-serif;
   --font-secondary-weight-std: 500;
   --font-monospaced: "Source Code Pro", monospace;
-  --s0: 5px;
-  --s1: 10px;
-  --s2: 20px;
-  --s3: 30px;
-  --s4: 40px;
-  --s5: 50px;
-  --s6: 60px;
 }
 /* body, */
 body[data-theme="light"] {
@@ -128,4 +121,13 @@ body {
   color: rgb(var(--surface-text));
 }
 
+.padding-hr-1 {
+  padding: 0 5vw;
+}
+
 /* component specific styles */
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
