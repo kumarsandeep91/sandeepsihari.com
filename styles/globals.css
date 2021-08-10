@@ -14,35 +14,62 @@
 }
 /* body, */
 body[data-theme="light"] {
-  --background: #ffffff;
-  --bg-surface: #ffffff;
-  --bg-primary: #6200ee;
-  --bg-primary-variant: #3700B3;
-  --bg-secondary: #03DAC6;
-  --bg-secondary-variant: #018786;
-  --bg-error: #b00020;
-  --bg-text: #000000;
-  --surface-text: #000000;
-  --primary-text: #ffffff;
-  --primary-variant-text: #ffffff;
-  --secondary-text: #000000;
-  --error-text: #ffffff;
+  /* https://stackoverflow.com/a/41265350/4547798 */
+  /* #ffffff */
+  --background: 255, 255, 255;
+  /* #ffffff */
+  --bg-surface: 255, 255, 255;
+  /* #6200ee */
+  --bg-primary: 98, 0, 238;
+  /* #3700b3 */
+  --bg-primary-variant: 55, 0, 179;
+  /* #03dac6 */
+  --bg-secondary: 3, 218, 198;
+  /* #018786 */
+  --bg-secondary-variant: 1, 135, 134;
+  /* #b00020 */
+  --bg-error: 176, 0, 32;
+  /* #000000 */
+  --bg-text: 0, 0, 0;
+  /* #000000 */
+  --surface-text: 0, 0, 0;
+  /* #ffffff */
+  --primary-text: 255, 255, 255;
+  /* #ffffff */
+  --primary-variant-text: 255, 255, 255;
+  /* #000000 */
+  --secondary-text: 0, 0, 0;
+  /* #ffffff */
+  --error-text: 255, 255, 255;
 }
 body,
 body[data-theme="dark"] {
-  --background: #121212;
-  --bg-surface: #121212;
-  --bg-primary: #BB86FC;
-  --bg-primary-variant: #3700B3;
-  --bg-secondary: #03DAC6;
-  --bg-secondary-variant: #03DAC6;
-  --bg-error: #CF6679;
-  --bg-text: #ffffff;
-  --surface-text: #ffffff;
-  --primary-text: #000000;
-  --primary-variant-text: #ffffff;
-  --secondary-text: #000000;
-  --error-text: #000000;
+  /* #121212 */
+  --background: 18, 18, 18;
+  /* #121212 */
+  --bg-surface: 18, 18, 18;
+  /* #bb86fc */
+  --bg-primary: 187, 134, 252;
+  /* #3700b3 */
+  --bg-primary-variant: 55, 0, 179;
+  /* #03dac6 */
+  --bg-secondary: 3, 218, 198;
+  /* #03dac6 */
+  --bg-secondary-variant: 3, 218, 198;
+  /* #cf6679 */
+  --bg-error: 207, 102, 121;
+  /* #ffffff */
+  --bg-text: 255, 255, 255;
+  /* #ffffff */
+  --surface-text: 255, 255, 255;
+  /* #000000 */
+  --primary-text: 0, 0, 0;
+  /* #ffffff */
+  --primary-variant-text: 255, 255, 255;
+  /* #000000 */
+  --secondary-text: 0, 0, 0;
+  /* #000000 */
+  --error-text: 0, 0, 0;
 }
 body,
 html {
@@ -51,17 +78,54 @@ html {
 }
 body {
   font-family: var(--font-primary);
-  background: var(--background);
-  color: var(--bg-text);
+  background: rgb(var(--background));
+  color: rgb(var(--bg-text));
   line-height: 1.5;
   -webkit-transition: background 0.5s ease-in-out;
   -o-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
 }
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+
+/* different surfaces */
+.surface-0 {
+  background: rgba(var(--surface-text));
+  color: rgb(var(--surface-text));
 }
-a {
-  text-decoration: none;
+.surface-5 {
+  background: rgba(var(--surface-text),0.05);
+  color: rgb(var(--surface-text));
 }
+.surface-7 {
+  background: rgba(var(--surface-text),0.07);
+  color: rgb(var(--surface-text));
+}
+.surface-8 {
+  background: rgba(var(--surface-text),0.08);
+  color: rgb(var(--surface-text));
+}
+.surface-9 {
+  background: rgba(var(--surface-text),0.09);
+  color: rgb(var(--surface-text));
+}
+.surface-11 {
+  background: rgba(var(--surface-text),0.11);
+  color: rgb(var(--surface-text));
+}
+.surface-12 {
+  background: rgba(var(--surface-text),0.12);
+  color: rgb(var(--surface-text));
+}
+.surface-14 {
+  background: rgba(var(--surface-text),0.14);
+  color: rgb(var(--surface-text));
+}
+.surface-15 {
+  background: rgba(var(--surface-text),0.15);
+  color: rgb(var(--surface-text));
+}
+.surface-16 {
+  background: rgba(var(--surface-text),0.16);
+  color: rgb(var(--surface-text));
+}
+
+/* component specific styles */
