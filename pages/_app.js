@@ -4,7 +4,9 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <header><Navbar /></header>
+      <header className="surface-16">
+        <Navbar />
+      </header>
       <Component {...pageProps} />
       <footer></footer>
     </>
