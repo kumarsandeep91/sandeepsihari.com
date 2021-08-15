@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/eb7d7fe3b5fd18a0a7fe.css" as="style"/><link rel="stylesheet" href="/_next/static/css/eb7d7fe3b5fd18a0a7fe.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-a54b4f32bdc1ef890ddd.js"></script><script src="/_next/static/chunks/webpack-61f1b6d34e7ba415b8c1.js" defer=""></script><script src="/_next/static/chunks/framework-895f067827ebe11ffe45.js" defer=""></script><script src="/_next/static/chunks/main-4809d8b3f3ef3c100198.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f6d4501f23e2d8a2539e.js" defer=""></script><script src="/_next/static/chunks/522-f7346dcade1160f9e76b.js" defer=""></script><script src="/_next/static/chunks/pages/%5Bslug%5D-cebc2f106c56cd234711.js" defer=""></script><script src="/_next/static/buAOiN12ebfkcIKhRoN0y/_buildManifest.js" defer=""></script><script src="/_next/static/buAOiN12ebfkcIKhRoN0y/_ssgManifest.js" defer=""></script></head><body><div id="__next"><header class="surface-16"><nav class="top-nav"><a class="top-nav-logo" href="/"><spna>&lt;Techno</spna>   <span>Baba /&gt;</span></a><ul class="top-nav-links"><li><a href="/recipies">Recipies</a></li><li><a href="/ingredients">Ingredients</a></li><li><a href="/chef">Chef</a></li><li><a href="/store">Store</a></li></ul></nav></header><main class="post-root"><section class="post-content surface-5"><h1 class="post-title">C++ type casting</h1><div class="post-created-by"><span>Posted</span><time dateTime="2017-11-13">13th November 2017</time><span>by</span><span>Sandeep Sihari</span></div><hr/><div><h2>C++ type casting</h2>
+<p>
+    <b>Type Casting</b> refers tp as converting one data type into another data types. Some data conversions are <b>not possible</b> while some are <b>possible</b> but result in <b>data loss.</b>
+</p>
+<h3>Potential type casting problems</h3>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th><b>Conversion</b></th>
+                <th><b>Potential Issues</b></th>
+            </tr>
+            <tr>
+                <td>Large floating point type to small floating point type</td>
+                <td>Loss of precision and/or the starting value might be out of range for the new type</td>
+            </tr>
+            <tr>
+                <td>Floating point type to integer type</td>
+                <td>Loss of the fractional component of the floating point type and/or out of range</td>
+            </tr>
+            <tr>
+                <td>Bigger integer type to smaller integer type</td>
+                <td>Starting value may be out of range for the new type</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    This table only deals with numeric data type conversions. There are other conversion types such as from <b>character to numeric or numeric to character</b>, or among character types. C++ also uses the boolean type that represents true or false. If you assign a zero value to a bool variable, it will be converted to false. Any non-zero value is converted to true.
+</p>
+<h3>Different type castings</h3>
+<ul>
+    <li>Implicit Casting: Performs automatically by C++.</li>
+    <li>Explicit Casting: Performs by the user.</li>
+</ul>
+<h4>Implicit Casting</h4>
+<pre class="line-numbers language-cpp">
+<code>
+    // smaller(int) data type to larger data type(long)
+    int x = 100;
+    long y;
+    y = x;
+    cout << y << endl;
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ 100
+    $ 
+</code>
+</pre>
+<pre class="line-numbers language-cpp">
+<code>
+    // character to numeric conversion
+    char ch = 'S';
+    int i;
+    i = ch;
+    cout << i << endl;
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ 83
+    $ 
+</code>
+</pre>
+<pre class="line-numbers language-cpp">
+<code>
+    // numeric to character conversion
+    int i = 65;
+    char ch;
+    ch = i;
+    cout << ch << endl;
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ A
+    $ 
+</code>
+</pre>
+<pre class="line-numbers language-cpp">
+<code>
+    // numeric to boolean conversion
+    int i = 65, j = 0;
+    bool b = i;
+    bool c = j;
+    cout << "b is " << b << endl;
+    cout << "c is " << c << endl;
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ b is true
+    $ c is false
+    $
+</code>
+</pre>
+<h4>Explicit Casting</h4>
+<p><b>Method 1</b></p>
+<pre class="line-numbers language-cpp">
+<code>
+    char ch = 'A', x = 'a';
+    int i, j;
+    // casting statement. character to int.
+    i = (int) ch;
+    cout << "i is " << i << endl;
+<pre><code>// or you can also do this
+j = int(x);
+cout &#x3C;&#x3C; "j is " &#x3C;&#x3C; j &#x3C;&#x3C; endl;
+</code></pre>
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ i is 65
+    $ j is 97
+    $
+</code>
+</pre>
+<p><b>Method 2: using static_cast&lt;type&gt;</b></p>
+<pre class="line-numbers language-cpp">
+<code>
+    char ch;
+    int i = 65;
+    ch = static_cast<char>(i);   // int to char
+    cout << "ch is " << ch << endl;
+</code>
+</pre>
+<p><b>Output</b></p>
+<pre class="language-bash">
+<code>
+    $ ch is A
+    $
+</code>
+</pre>
+</div></section></main><footer></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"data":{"title":"C++ type casting","author":"Sandeep Sihari","category":"cpp","permalink":"/cpp-type-casting/","tags":"cpp programming","date":"2017-11-13"},"content":"\u003ch2\u003eC++ type casting\u003c/h2\u003e\n\u003cp\u003e\n    \u003cb\u003eType Casting\u003c/b\u003e refers tp as converting one data type into another data types. Some data conversions are \u003cb\u003enot possible\u003c/b\u003e while some are \u003cb\u003epossible\u003c/b\u003e but result in \u003cb\u003edata loss.\u003c/b\u003e\n\u003c/p\u003e\n\u003ch3\u003ePotential type casting problems\u003c/h3\u003e\n\u003cdiv class=\"table-responsive\"\u003e\n    \u003ctable class=\"table table-bordered\"\u003e\n        \u003ctbody\u003e\n            \u003ctr\u003e\n                \u003cth\u003e\u003cb\u003eConversion\u003c/b\u003e\u003c/th\u003e\n                \u003cth\u003e\u003cb\u003ePotential Issues\u003c/b\u003e\u003c/th\u003e\n            \u003c/tr\u003e\n            \u003ctr\u003e\n                \u003ctd\u003eLarge floating point type to small floating point type\u003c/td\u003e\n                \u003ctd\u003eLoss of precision and/or the starting value might be out of range for the new type\u003c/td\u003e\n            \u003c/tr\u003e\n            \u003ctr\u003e\n                \u003ctd\u003eFloating point type to integer type\u003c/td\u003e\n                \u003ctd\u003eLoss of the fractional component of the floating point type and/or out of range\u003c/td\u003e\n            \u003c/tr\u003e\n            \u003ctr\u003e\n                \u003ctd\u003eBigger integer type to smaller integer type\u003c/td\u003e\n                \u003ctd\u003eStarting value may be out of range for the new type\u003c/td\u003e\n            \u003c/tr\u003e\n        \u003c/tbody\u003e\n    \u003c/table\u003e\n\u003c/div\u003e\n\u003cp\u003e\n    This table only deals with numeric data type conversions. There are other conversion types such as from \u003cb\u003echaracter to numeric or numeric to character\u003c/b\u003e, or among character types. C++ also uses the boolean type that represents true or false. If you assign a zero value to a bool variable, it will be converted to false. Any non-zero value is converted to true.\n\u003c/p\u003e\n\u003ch3\u003eDifferent type castings\u003c/h3\u003e\n\u003cul\u003e\n    \u003cli\u003eImplicit Casting: Performs automatically by C++.\u003c/li\u003e\n    \u003cli\u003eExplicit Casting: Performs by the user.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4\u003eImplicit Casting\u003c/h4\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    // smaller(int) data type to larger data type(long)\n    int x = 100;\n    long y;\n    y = x;\n    cout \u003c\u003c y \u003c\u003c endl;\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ 100\n    $ \n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    // character to numeric conversion\n    char ch = 'S';\n    int i;\n    i = ch;\n    cout \u003c\u003c i \u003c\u003c endl;\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ 83\n    $ \n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    // numeric to character conversion\n    int i = 65;\n    char ch;\n    ch = i;\n    cout \u003c\u003c ch \u003c\u003c endl;\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ A\n    $ \n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    // numeric to boolean conversion\n    int i = 65, j = 0;\n    bool b = i;\n    bool c = j;\n    cout \u003c\u003c \"b is \" \u003c\u003c b \u003c\u003c endl;\n    cout \u003c\u003c \"c is \" \u003c\u003c c \u003c\u003c endl;\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ b is true\n    $ c is false\n    $\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003ch4\u003eExplicit Casting\u003c/h4\u003e\n\u003cp\u003e\u003cb\u003eMethod 1\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    char ch = 'A', x = 'a';\n    int i, j;\n    // casting statement. character to int.\n    i = (int) ch;\n    cout \u003c\u003c \"i is \" \u003c\u003c i \u003c\u003c endl;\n\u003cpre\u003e\u003ccode\u003e// or you can also do this\nj = int(x);\ncout \u0026#x3C;\u0026#x3C; \"j is \" \u0026#x3C;\u0026#x3C; j \u0026#x3C;\u0026#x3C; endl;\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ i is 65\n    $ j is 97\n    $\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eMethod 2: using static_cast\u0026lt;type\u0026gt;\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"line-numbers language-cpp\"\u003e\n\u003ccode\u003e\n    char ch;\n    int i = 65;\n    ch = static_cast\u003cchar\u003e(i);   // int to char\n    cout \u003c\u003c \"ch is \" \u003c\u003c ch \u003c\u003c endl;\n\u003c/code\u003e\n\u003c/pre\u003e\n\u003cp\u003e\u003cb\u003eOutput\u003c/b\u003e\u003c/p\u003e\n\u003cpre class=\"language-bash\"\u003e\n\u003ccode\u003e\n    $ ch is A\n    $\n\u003c/code\u003e\n\u003c/pre\u003e\n"},"__N_SSG":true},"page":"/[slug]","query":{"slug":"cpp-type-casting"},"buildId":"buAOiN12ebfkcIKhRoN0y","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
