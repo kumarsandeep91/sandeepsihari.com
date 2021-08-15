@@ -1,10 +1,10 @@
 ---
-layout: post
 title: C++ Character data types.
 author: Sandeep Sihari
 category: cpp
 permalink: /cpp-character-data-types/
 tags: cpp programming
+date: "2017-11-12"
 ---
 
 <h2>C++ Character data types</h2>

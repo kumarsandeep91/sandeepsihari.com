@@ -1,14 +1,15 @@
 ---
-layout: post
 title: Changing the styles of selected HTML element
 author: Sandeep Sihari
 category: javascript
 permalink: /change-style-selected-html-element/
 tags: javascript programming
+date: "2017-11-08"
 ---
 
-<h2>Step 1: Select the HTML element</h2>
-<p><b>Syntax</b></p>
+## Step 1: Select the HTML element
+
+**Syntax**
 
 <pre class="line-numbers language-javascript">
     <code>

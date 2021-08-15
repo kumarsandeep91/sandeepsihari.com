@@ -1,10 +1,10 @@
 ---
-layout: post
 title: C++ Numeric data types.
 author: Sandeep Sihari
 category: cpp
 permalink: /cpp-numeric-data-types/
 tags: cpp programming
+date: "2017-11-12"
 ---
 
 <h2>C++ Numeric data types</h2>

@@ -1,10 +1,10 @@
 ---
-layout: post
 title: C++ Other data types.
 author: Sandeep Sihari
 category: cpp
 permalink: /cpp-other-data-types/
 tags: cpp programming
+date: "2017-11-12"
 ---
 
 <h2>C++ Other data types</h2>

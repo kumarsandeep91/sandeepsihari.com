@@ -1,10 +1,10 @@
 ---
-layout: post
 title: C++ type casting
 author: Sandeep Sihari
 category: cpp
 permalink: /cpp-type-casting/
 tags: cpp programming
+date: "2017-11-13"
 ---
 
 <h2>C++ type casting</h2>
