@@ -151,7 +151,7 @@ header {
   -ms-flex-align: center;
   align-items: center;
   font-size: 2.5rem;
-  max-width: min(90vw, 90rem);
+  max-width: min(95vw, 100rem);
 }
 .top-nav-logo {
   text-decoration: none;
@@ -176,4 +176,41 @@ header {
 .top-nav-links > li > * {
   text-decoration: none;
   color: inherit;
+}
+
+.post-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.post-content {
+  font-size: 1.6rem;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: min(90vw, 90rem);
+  padding: 1em 1.25em;
+}
+
+.post-title {
+  margin: 0.6em 0 0;
+  font-size: clamp(1.5rem, 3vw, 4rem);
+  opacity: 87%;
+}
+.post-excerpt {
+  margin: 0.5em 0 0;
+  font-style: italic;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  opacity: 60%;
+}
+.post-created-by {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  opacity: 87%,
 }

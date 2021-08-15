@@ -1,10 +1,18 @@
-import { remark } from "remark";
-import html from "remark-html";
-
+import { Excerpt, PostedBy, Title } from "../components/post";
 import { getAllPosts, getPostBySlug, markdownToHtml } from "../utils";
 
 const Post = ({ data, content }) => {
-  return <h1>blog post page</h1>;
+  return (
+    <main className="post-root">
+      <section className="post-content surface-5">
+        <Title value={data.title} />
+        {data?.excerpt && <Excerpt value={data.excerpt} />}
+        <PostedBy date={data.date} author={data.author} />
+        <hr />
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      </section>
+    </main>
+  );
 };
 
 export default Post;
