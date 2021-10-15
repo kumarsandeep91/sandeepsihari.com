@@ -4,7 +4,8 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <header className="surface-16">
+    {/* TODO: add surface class for elevation and box-shadows */}
+      <header className="flex center global-padding primary">
         <Navbar />
       </header>
       <Component {...pageProps} />
