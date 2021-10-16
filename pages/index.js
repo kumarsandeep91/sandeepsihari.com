@@ -42,7 +42,7 @@ export default function Home() {
 			<main>
 				<section className="global-padding text-align-center">
 					<h1 className="main-heading">
-						Hi, I'm <span className="color-highlight">Sandeep</span>
+						Hi, I&apos;m <span className="color-highlight">Sandeep</span>
 					</h1>
 					<h4 className="typewriter">
 						<span ref={el} />
