@@ -1,7 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import Head from "next/head";
-
 import Typed from "typed.js";
+
+import PageHeading from "../components/page-heading";
+import { Skill, ProjectThumbnail } from "../components/common";
+import { SKILLS } from "../constants";
 
 export default function Home() {
 	// Ref https://jsfiddle.net/mattboldt/60h9an7y/
@@ -50,6 +53,61 @@ export default function Home() {
 						<button className="btn-secondary-outline btn-rounded">
 							Say hello
 						</button>
+					</div>
+				</section>
+
+				<section id="about-me" className="global-padding">
+					{/* Left div */}
+					<div>
+						<PageHeading heading="About me" />
+						<p className="body-text">
+							Hello! My name is <span className="color-primary">Sandeep</span>{" "}
+							and I enjoy creating anything that is related to computers. My
+							interest in computers goes back to year 2000, when I made my
+							father to buy me a{" "}
+							<span className="color-secondary">
+								multi-function folding calculator.
+							</span>{" "}
+							After that my interest grew deeper and deeper.
+						</p>
+						<p className="body-text">
+							Fast-forward to today, and I’ve had the privilege of working at{" "}
+							<span className="color-tertiary">my failed startup,</span> an{" "}
+							<span className="color-highlight">ed-tech firm,</span> a{" "}
+							<span className="color-primary">real estate company</span>, a{" "}
+							<span className="color-secondary">fin-tech startup</span> and{" "}
+							<span className="color-tertiary">fastest unicorn in India.</span>
+						</p>
+						<p className="body-text">
+							Nowadays I took a break from full-time job and refining my skills
+							at <span className="color-primary">ui.dev</span> and{" "}
+							<span className="color-secondary">css-for-js.</span>
+						</p>
+					</div>
+					{/* Right div */}
+					<div></div>
+				</section>
+				<section id="my-skills" className="primary global-padding">
+					{/* Left div */}
+					<div>
+						<PageHeading heading="My skills" />
+						<div className="skill-container">
+							{SKILLS.map((skill) => (
+								<Skill key={skill} name={skill} />
+							))}
+						</div>
+					</div>
+					{/* Right Div */}
+					<div></div>
+				</section>
+
+				<section id="projects" className="global-padding">
+					<PageHeading center heading="What I’ve built" />
+					<div className="project-root">
+						<ProjectThumbnail
+							url="/projects/adinfraheight.png"
+							description="adinfraheight.com"
+						/>
 					</div>
 				</section>
 			</main>
