@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import Typed from "typed.js";
@@ -85,7 +86,17 @@ export default function Home() {
 						</p>
 					</div>
 					{/* Right div */}
-					<div></div>
+					<div className="flex center">
+						<div className="me-root">
+							<div className="me-outline"></div>
+							<img
+								className="me"
+								src="/authers/sandeep_sihari.jpeg"
+								alt="sandeep sihari picture"
+							/>
+							<div className="me-overlay"></div>
+						</div>
+					</div>
 				</section>
 				<section id="my-skills" className="primary global-padding">
 					{/* Left div */}
@@ -98,7 +109,13 @@ export default function Home() {
 						</div>
 					</div>
 					{/* Right Div */}
-					<div></div>
+					<div className="flex center relative">
+						<img
+							className="celebration"
+							src="/celebration.png"
+							alt="celebration"
+						/>
+					</div>
 				</section>
 
 				<section id="projects" className="global-padding">
