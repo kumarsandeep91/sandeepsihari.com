@@ -4,7 +4,7 @@ import Head from "next/head";
 import Typed from "typed.js";
 
 import PageHeading from "../components/page-heading";
-import { Skill, ProjectThumbnail } from "../components/common";
+import { Skill, ProjectThumbnail, SocialIconGroup } from "../components/common";
 import { SKILLS } from "../constants";
 
 export default function Home() {
@@ -115,6 +115,10 @@ export default function Home() {
 							src="/celebration.png"
 							alt="celebration"
 						/>
+
+						<div className="social">
+							<SocialIconGroup />
+						</div>
 					</div>
 				</section>
 

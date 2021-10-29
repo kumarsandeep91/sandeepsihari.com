@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { LinkedIcon, TwitterIcon, YoutubeIcon } from "../svgs";
 
 export const Skill = ({ name }) => {
 	return (
@@ -23,6 +24,16 @@ export const ProjectThumbnail = ({ url, description }) => {
 				alt={description}
 			/>
 			<div className="overlay tertiary corner-radius-1" />
+		</div>
+	);
+};
+
+export const SocialIconGroup = () => {
+	return (
+		<div className="flex gap-1">
+			<TwitterIcon />
+			<YoutubeIcon />
+			<LinkedIcon />
 		</div>
 	);
 };
