@@ -144,7 +144,9 @@ export default function Home() {
 						to get back to you!
 					</p>
 
-					<Button />
+					<div className="flex center padding-block-1">
+						<Button />
+					</div>
 				</section>
 			</main>
 		</>

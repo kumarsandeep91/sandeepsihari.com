@@ -136,6 +136,10 @@ img {
 	display: flex;
 }
 
+.column {
+	flex-direction: column;
+}
+
 .flex-full-width {
 	display: flex;
 	flex-grow: 1;
@@ -289,7 +293,6 @@ img {
 .padding-hr-1 {
 	padding: 0 5em;
 }
-
 /* component specific styles */
 .top-nav {
 	font-size: 1em;
@@ -445,6 +448,10 @@ img {
 .social {
 	position: absolute;
 	bottom: 20%;
+}
+
+.padding-block-1 {
+	padding-block: 1em;
 }
 
 #about-me,
