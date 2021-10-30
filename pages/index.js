@@ -42,110 +42,128 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<section className="global-padding text-align-center">
-					<h1 className="main-heading">
-						Hi, I&apos;m <span className="color-highlight">Sandeep</span>
-					</h1>
-					<h4 className="typewriter">
-						<span ref={el} />
-					</h4>
+				<section className="global-padding flex center">
+					<div className="content text-align-center">
+						<h1 className="main-heading">
+							Hi, I&apos;m <span className="color-highlight">Sandeep</span>
+						</h1>
+						<h4 className="typewriter">
+							<span ref={el} />
+						</h4>
 
-					<div className="flex center gap-1 cta">
-						<button className="btn-secondary btn-rounded">See my stuff</button>
-						<Button />
+						<div className="flex center gap-1 cta">
+							<button className="btn-secondary btn-rounded">
+								See my stuff
+							</button>
+							<Button />
+						</div>
 					</div>
 				</section>
 
-				<section id="about-me" className="global-padding">
-					{/* Left div */}
-					<div>
-						<PageHeading heading="About me" />
-						<p className="body-text">
-							Hello! My name is <span className="color-primary">Sandeep</span>{" "}
-							and I enjoy creating anything that is related to computers. My
-							interest in computers goes back to year 2000, when I made my
-							father to buy me a{" "}
-							<span className="color-secondary">
-								multi-function folding calculator.
-							</span>{" "}
-							After that my interest grew deeper and deeper.
-						</p>
-						<p className="body-text">
-							Fast-forward to today, and I’ve had the privilege of working at{" "}
-							<span className="color-tertiary">my failed startup,</span> an{" "}
-							<span className="color-highlight">ed-tech firm,</span> a{" "}
-							<span className="color-primary">real estate company</span>, a{" "}
-							<span className="color-secondary">fin-tech startup</span> and{" "}
-							<span className="color-tertiary">fastest unicorn in India.</span>
-						</p>
-						<p className="body-text">
-							Nowadays I took a break from full-time job and refining my skills
-							at <span className="color-primary">ui.dev</span> and{" "}
-							<span className="color-secondary">css-for-js.</span>
-						</p>
+				<section className="global-padding flex center">
+					<div id="about-me" className="content">
+						{/* Left div */}
+						<div>
+							<PageHeading heading="About me" />
+							<p className="body-text">
+								Hello! My name is <span className="color-primary">Sandeep</span>{" "}
+								and I enjoy creating anything that is related to computers. My
+								interest in computers goes back to year 2000, when I made my
+								father to buy me a{" "}
+								<span className="color-secondary">
+									multi-function folding calculator.
+								</span>{" "}
+								After that my interest grew deeper and deeper.
+							</p>
+							<p className="body-text">
+								Fast-forward to today, and I’ve had the privilege of working at{" "}
+								<span className="color-tertiary">my failed startup,</span> an{" "}
+								<span className="color-highlight">ed-tech firm,</span> a{" "}
+								<span className="color-primary">real estate company</span>, a{" "}
+								<span className="color-secondary">fin-tech startup</span> and{" "}
+								<span className="color-tertiary">
+									fastest unicorn in India.
+								</span>
+							</p>
+							<p className="body-text">
+								Nowadays I took a break from full-time job and refining my
+								skills at <span className="color-primary">ui.dev</span> and{" "}
+								<span className="color-secondary">css-for-js.</span>
+							</p>
+						</div>
+						{/* Right div */}
+						<div className="flex center">
+							<div className="me-root">
+								<div className="me-outline"></div>
+								<img
+									className="me"
+									src="/authers/sandeep_sihari.jpeg"
+									alt="sandeep sihari picture"
+								/>
+								<div className="me-overlay"></div>
+							</div>
+						</div>
 					</div>
-					{/* Right div */}
-					<div className="flex center">
-						<div className="me-root">
-							<div className="me-outline"></div>
+				</section>
+
+				<section className="primary global-padding flex center">
+					<div id="my-skills" className="content">
+						{/* Left div */}
+						<div>
+							<PageHeading heading="My skills" />
+							<div className="skill-container">
+								{SKILLS.map((skill) => (
+									<Skill key={skill} name={skill} />
+								))}
+							</div>
+						</div>
+						{/* Right Div */}
+						<div className="flex center relative">
 							<img
-								className="me"
-								src="/authers/sandeep_sihari.jpeg"
-								alt="sandeep sihari picture"
+								className="celebration"
+								src="/celebration.png"
+								alt="celebration"
 							/>
-							<div className="me-overlay"></div>
-						</div>
-					</div>
-				</section>
-				<section id="my-skills" className="primary global-padding">
-					{/* Left div */}
-					<div>
-						<PageHeading heading="My skills" />
-						<div className="skill-container">
-							{SKILLS.map((skill) => (
-								<Skill key={skill} name={skill} />
-							))}
-						</div>
-					</div>
-					{/* Right Div */}
-					<div className="flex center relative">
-						<img
-							className="celebration"
-							src="/celebration.png"
-							alt="celebration"
-						/>
 
-						<div className="social">
-							<SocialIconGroup />
+							<div className="social">
+								<SocialIconGroup />
+							</div>
 						</div>
 					</div>
 				</section>
 
-				<section id="projects" className="global-padding">
-					<PageHeading center heading="What I’ve built" />
-					<div className="project-root">
-						<ProjectThumbnail
-							url="/projects/adinfraheight.png"
-							description="adinfraheight.com"
-						/>
+				<section className="global-padding flex center">
+					<div id="projects" className="content">
+						<PageHeading center heading="What I’ve built" />
+						<div className="project-root">
+							<ProjectThumbnail
+								url="/projects/adinfraheight.png"
+								description="adinfraheight.com"
+							/>
+						</div>
 					</div>
 				</section>
 
-				<section id="whats-next" className="accent global-padding">
-					<PageHeading center heading="What's next?" />
+				<section className="accent global-padding flex center">
+					<div id="whats-next" className="content">
+						<PageHeading center heading="What's next?" />
 
-					<p className="body-text">
-						Feel free to reach out if you are looking for a{" "}
-						<span className="color-highlight">developer/consultant/friend</span>
-						, have a <span className="color-highlight">question/joke/meme</span>
-						, wanted to share{" "}
-						<span className="color-highlight">cute pet pics</span> or just want
-						to <span className="color-highlight">say hi</span>, I’ll try my best
-						to get back to you!
-					</p>
+						<p className="body-text">
+							Feel free to reach out if you are looking for a{" "}
+							<span className="color-highlight">
+								developer/consultant/friend
+							</span>
+							, have a{" "}
+							<span className="color-highlight">question/joke/meme</span>,
+							wanted to share{" "}
+							<span className="color-highlight">cute pet pics</span> or just
+							want to <span className="color-highlight">say hi</span>, I’ll try
+							my best to get back to you!
+						</p>
 
-					<div className="flex center padding-block-1">
-						<Button />
+						<div className="flex center padding-block-1">
+							<Button />
+						</div>
 					</div>
 				</section>
 			</main>

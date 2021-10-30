@@ -57,25 +57,27 @@ const Navbar = () => {
 
 	if (windowWidth >= 768) {
 		return (
-			<nav className="top-nav flex-full-width space-between-inline center-block">
-				<Logo />
+			<nav className="top-nav flex center">
+				<div className="content flex-full-width space-between-inline center-block">
+					<Logo />
 
-				<ul className="top-nav-links">
-					<li>
-						<a href="/recipies">Recipies</a>
-					</li>
-					<li>
-						<a href="/ingredients">Ingredients</a>
-					</li>
-					<li>
-						<a href="/chef">Chef</a>
-					</li>
-					<li>
-						<a href="/store">Store</a>
-					</li>
-				</ul>
+					<ul className="top-nav-links">
+						<li>
+							<a href="/recipies">Recipies</a>
+						</li>
+						<li>
+							<a href="/ingredients">Ingredients</a>
+						</li>
+						<li>
+							<a href="/chef">Chef</a>
+						</li>
+						<li>
+							<a href="/store">Store</a>
+						</li>
+					</ul>
 
-				<Github />
+					<Github />
+				</div>
 			</nav>
 		);
 	} else {
