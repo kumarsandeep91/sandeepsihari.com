@@ -81,10 +81,10 @@ hr {
 	padding: 0;
 }
 
-button {
+.button {
 	display: inline-block;
 	border: none;
-	padding: 0.75em 1em;
+	padding: 0.5em 1em;
 	margin: 0;
 	text-decoration: none;
 	font-size: 1em;
@@ -96,12 +96,12 @@ button {
 	-moz-appearance: none;
 }
 
-button:focus {
+.button:focus {
 	outline: 1px solid hsl(var(--color-white));
 	outline-offset: -0.25em;
 }
 
-button:active {
+.button:active {
 	transform: scale(0.99);
 }
 /* Button styles end */
@@ -325,6 +325,7 @@ img {
 .main-heading {
 	-webkit-padding-before: 0.9em;
 	padding-block-start: 1em;
+	font-size: 2em;
 }
 
 .typewriter {
@@ -453,8 +454,8 @@ img {
 	bottom: 20%;
 }
 
-.padding-block-1 {
-	padding-block: 1em;
+.padding-block-2-1 {
+	padding-block: 2em 1em;
 }
 
 .content {

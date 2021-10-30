@@ -52,10 +52,14 @@ export default function Home() {
 						</h4>
 
 						<div className="flex center gap-1 cta">
-							<button className="btn-secondary btn-rounded">
-								See my stuff
-							</button>
-							<Button />
+							<Button varient="secondary">See my stuff</Button>
+							<Button
+								link
+								href="mailto:kumarsandeep91@gmail.com"
+								varient="secondary-outline"
+							>
+								Say hello
+							</Button>
 						</div>
 					</div>
 				</section>
@@ -161,8 +165,14 @@ export default function Home() {
 							my best to get back to you!
 						</p>
 
-						<div className="flex center padding-block-1">
-							<Button />
+						<div className="flex center padding-block-2-1">
+							<Button
+								href="mailto:kumarsandeep91@gmail.com"
+								link
+								varient="secondary-outline"
+							>
+								Say hello
+							</Button>
 						</div>
 					</div>
 				</section>

@@ -1,6 +1,10 @@
-export const Button = ({ link }) => {
-	return (
-		<button className="btn-secondary-outline btn-rounded">Say hello</button>
+export const Button = ({ children, varient, link, href }) => {
+	return link ? (
+		<a href={href} className={`button btn-${varient} btn-rounded`}>
+			{children}
+		</a>
+	) : (
+		<button className={`button btn-${varient} btn-rounded`}>{children}</button>
 	);
 };
 
