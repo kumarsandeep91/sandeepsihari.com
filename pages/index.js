@@ -96,7 +96,7 @@ export default function Home() {
 							</p>
 						</div>
 						{/* Right div */}
-						<div className="flex center">
+						<div className="flex center no-mobile">
 							<div className="me-root">
 								<div className="me-outline"></div>
 								<img
@@ -122,7 +122,7 @@ export default function Home() {
 							</div>
 						</div>
 						{/* Right Div */}
-						<div className="flex center relative">
+						<div className="flex center relative no-mobile">
 							<img
 								className="celebration"
 								src="/celebration.png"
@@ -140,6 +140,22 @@ export default function Home() {
 					<div id="projects" className="content">
 						<PageHeading center heading="What I’ve built" />
 						<div className="project-root">
+							<ProjectThumbnail
+								url="/projects/adinfraheight.png"
+								description="adinfraheight.com"
+							/>
+							<ProjectThumbnail
+								url="/projects/adinfraheight.png"
+								description="adinfraheight.com"
+							/>
+							<ProjectThumbnail
+								url="/projects/adinfraheight.png"
+								description="adinfraheight.com"
+							/>
+							<ProjectThumbnail
+								url="/projects/adinfraheight.png"
+								description="adinfraheight.com"
+							/>
 							<ProjectThumbnail
 								url="/projects/adinfraheight.png"
 								description="adinfraheight.com"

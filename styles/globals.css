@@ -403,6 +403,8 @@ img {
 
 .project-root {
 	padding-block: 2em;
+	display: grid;
+	gap: 1.5em;
 }
 
 .me-root {
@@ -500,7 +502,11 @@ img {
 	margin-top: 0.5em;
 	opacity: 87%;
 } */
-
+@media (max-width: 767px) {
+	.no-mobile {
+		display: none;
+	}
+}
 /* base font size for xs, sm, md, lg, xl and xxl devices */
 /* xs - extra small */
 @media (max-width: 575px) {
@@ -536,6 +542,10 @@ img {
 	}
 	.body-text {
 		font-size: 0.6em;
+	}
+
+	.project-root {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	#about-me,
