@@ -6,6 +6,7 @@ import Typed from "typed.js";
 import PageHeading from "../components/page-heading";
 import { Skill, ProjectThumbnail, SocialIconGroup } from "../components/common";
 import { SKILLS } from "../constants";
+import { Button } from "../components/buttons";
 
 export default function Home() {
 	// Ref https://jsfiddle.net/mattboldt/60h9an7y/
@@ -51,9 +52,7 @@ export default function Home() {
 
 					<div className="flex center gap-1 cta">
 						<button className="btn-secondary btn-rounded">See my stuff</button>
-						<button className="btn-secondary-outline btn-rounded">
-							Say hello
-						</button>
+						<Button />
 					</div>
 				</section>
 
@@ -130,6 +129,22 @@ export default function Home() {
 							description="adinfraheight.com"
 						/>
 					</div>
+				</section>
+
+				<section id="whats-next" className="accent global-padding">
+					<PageHeading center heading="What's next?" />
+
+					<p className="body-text">
+						Feel free to reach out if you are looking for a{" "}
+						<span className="color-highlight">developer/consultant/friend</span>
+						, have a <span className="color-highlight">question/joke/meme</span>
+						, wanted to share{" "}
+						<span className="color-highlight">cute pet pics</span> or just want
+						to <span className="color-highlight">say hi</span>, I’ll try my best
+						to get back to you!
+					</p>
+
+					<Button />
 				</section>
 			</main>
 		</>

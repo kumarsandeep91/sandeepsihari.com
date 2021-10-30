@@ -182,6 +182,11 @@ img {
 	color: hsl(var(--color-dark-white));
 }
 
+.accent {
+	background: hsl(var(--color-accent));
+	color: hsl(var(--color-dark-white));
+}
+
 .color-primary {
 	color: hsl(var(--color-primary));
 }
