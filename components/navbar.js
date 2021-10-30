@@ -22,7 +22,7 @@ export const Logo = () => {
 
 export const Github = () => {
 	return (
-		<a>
+		<a href="https://github.com/kumarsandeep91" alt="Github">
 			<img
 				srcSet="
       /social/Icon_github-sm.png 576w,
