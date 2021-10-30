@@ -30,10 +30,19 @@ export const ProjectThumbnail = ({ url, description }) => {
 
 export const SocialIconGroup = () => {
 	return (
-		<div className="flex gap-1">
-			<TwitterIcon />
-			<YoutubeIcon />
-			<LinkedIcon />
+		<div className="flex">
+			<a className="button" href="https://twitter.com/kumarsandeep91">
+				<TwitterIcon />
+			</a>
+			<a
+				className="button"
+				href="https://www.youtube.com/channel/UCPQjicXbFPNS2_Vrp-KII7g"
+			>
+				<YoutubeIcon />
+			</a>
+			<a className="button" href="https://www.linkedin.com/in/sandeepsihari/">
+				<LinkedIcon />
+			</a>
 		</div>
 	);
 };
