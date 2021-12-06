@@ -26,6 +26,18 @@ body[data-theme="light"] {
 	--color-highlight: 342, 93%, 55%;
 	--color-backdrop: 240, 3%, 12%;
 
+	/* media query variables */
+	--device-min-width-xs: 1px;
+	--device-min-width-sm: 576px;
+	--device-min-width-md: 768px;
+	--device-min-width-lg: 992px;
+	--device-min-width-xl: 1200px;
+	--device-min-width-xxl: 1400px;
+
+	/* max content and navbar width */
+	--max-content-width: 1200px;
+	--max-navbar-width: 1350px;
+
 	background: hsl(var(--color-dark-white));
 }
 /* body, */
@@ -67,6 +79,7 @@ html {
 	font-weight: normal;
 	color: hsl(var(--color-accent));
 	height: 100%;
+	width: 100%;
 }
 
 h1,
@@ -176,6 +189,11 @@ img {
 	color: hsl(var(--color-dark-white));
 }
 
+.primary svg {
+	fill: hsl(var(--color-dark-white));
+	color: hsl(var(--color-dark-white));
+}
+
 .secondary {
 	background: hsl(var(--color-secondary));
 	color: hsl(var(--color-dark-white));
@@ -248,57 +266,30 @@ img {
 	border-radius: 0.5em;
 }
 
-/* different surfaces */
-.surface-0 {
-	background: rgba(var(--surface-text));
-	color: rgb(var(--surface-text));
-}
-.surface-5 {
-	background: rgba(var(--surface-text), 0.05);
-	color: rgb(var(--surface-text));
-}
-.surface-7 {
-	background: rgba(var(--surface-text), 0.07);
-	color: rgb(var(--surface-text));
-}
-.surface-8 {
-	background: rgba(var(--surface-text), 0.08);
-	color: rgb(var(--surface-text));
-}
-.surface-9 {
-	background: rgba(var(--surface-text), 0.09);
-	color: rgb(var(--surface-text));
-}
-.surface-11 {
-	background: rgba(var(--surface-text), 0.11);
-	color: rgb(var(--surface-text));
-}
-.surface-12 {
-	background: rgba(var(--surface-text), 0.12);
-	color: rgb(var(--surface-text));
-}
-.surface-14 {
-	background: rgba(var(--surface-text), 0.14);
-	color: rgb(var(--surface-text));
-}
-.surface-15 {
-	background: rgba(var(--surface-text), 0.15);
-	color: rgb(var(--surface-text));
-}
-.surface-16 {
-	background: rgba(var(--surface-text), 0.16);
-	color: rgb(var(--surface-text));
-}
-
 .padding-hr-1 {
 	padding: 0 5em;
 }
 /* component specific styles */
+.logo img {
+	max-height: 4em;
+	-o-object-fit: contain;
+	object-fit: contain;
+	transform: scale(1.3);
+}
+
 .top-nav {
 	font-size: 1em;
 	font-style: normal;
 	position: relative;
 	width: 100%;
+}
+.top-nav .icon {
+	height: 3em;
+	width: 3em;
+}
+
+.top-nav a {
+	color: inherit;
 }
 
 .top-nav-links {
@@ -315,11 +306,6 @@ img {
 
 .hamburger {
 	height: 1.2em;
-}
-
-.logo {
-	margin-bottom: -8%;
-	display: block;
 }
 
 .main-heading {
@@ -474,72 +460,26 @@ img {
 	padding-block-end: 1em;
 }
 
-/* .post-root {
-	display: flex;
-	justify-content: center;
-}
-.post-content {
-	font-size: 1.6rem;
-	flex-grow: 1;
-	max-width: min(90vw, 90rem);
-	padding: 1em 1.25em;
-}
-
-.post-title {
-	margin: 0.6em 0 0;
-	font-size: clamp(1.5rem, 3vw, 4rem);
-	opacity: 87%;
-}
-.post-excerpt {
-	margin: 0.5em 0 0;
-	font-style: italic;
-	font-size: clamp(1rem, 1.5vw, 3rem);
-	opacity: 60%;
-}
-.post-created-by {
-	display: flex;
-	gap: 0.5em;
-	margin-top: 0.5em;
-	opacity: 87%;
-} */
-@media (max-width: 767px) {
-	.no-mobile {
-		display: none;
-	}
-}
-/* base font size for xs, sm, md, lg, xl and xxl devices */
 /* xs - extra small */
-@media (max-width: 575px) {
+@media (min-width: 1px) {
 	body {
-		font-size: 1.6rem; /* 16px */
-	}
-	p {
-		line-height: 140%;
-		letter-spacing: 0.03em;
+		font-size: 1.2rem; /* 12px */
 	}
 }
 
 /* sm - small */
 @media (min-width: 576px) {
 	body {
-		font-size: 1.6rem; /* 16px */
-	}
-
-	p {
-		line-height: 140%;
-		letter-spacing: 0.03em;
+		font-size: 1.4rem; /* 14px */
 	}
 }
 
 /* md - medium */
 @media (min-width: 768px) {
 	body {
-		font-size: 2.4rem; /* 24px */
+		font-size: 1.6rem; /* 16px */
 	}
 
-	.logo {
-		margin-bottom: 0;
-	}
 	.body-text {
 		font-size: 0.6em;
 	}
@@ -558,17 +498,20 @@ img {
 /* lg - large */
 @media (min-width: 992px) {
 	body {
-		font-size: 3rem; /* 30px */
+		font-size: 1.8rem; /* 18px */
 	}
 }
 
 /* xl - extra large */
 @media (min-width: 1200px) {
 	body {
-		font-size: 3.2rem; /* 32px */
+		font-size: 2rem; /* 20px */
 	}
 }
 
 /* xxl - extra extra large */
 @media (min-width: 1400px) {
+	body {
+		font-size: 2.2rem; /* 22px */
+	}
 }
